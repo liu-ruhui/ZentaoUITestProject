@@ -13,7 +13,7 @@ class MenuLinkCase(unittest.TestCase):
         self.driver.quit()
 
     def test_my_link(self):
-        '''case04 验证我的地盘菜单能否正确链接'''
+        '''case01 验证我的地盘菜单能否正确链接'''
         self.driver.find_element(By.XPATH,'//input[@id="account"]').send_keys('admin')
         self.driver.find_element(By.XPATH,'//input[@name="password"]').send_keys('Lrh19960912')
         self.driver.find_element(By.XPATH,'//button[@id="submit"]').click()
@@ -21,7 +21,7 @@ class MenuLinkCase(unittest.TestCase):
         self.assertTrue(EC.title_is("我的地盘 - 禅道"))
 
     def test_product_link(self):
-        '''case05 验证产品菜单能否正确链接'''
+        '''case02 验证产品菜单能否正确链接'''
         self.driver.find_element(By.XPATH, '//input[@id="account"]').send_keys('admin')
         self.driver.find_element(By.XPATH, '//input[@name="password"]').send_keys('Lrh19960912')
         self.driver.find_element(By.XPATH, '//button[@id="submit"]').click()

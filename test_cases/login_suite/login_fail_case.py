@@ -13,7 +13,7 @@ class LoginFailCase(unittest.TestCase):
         self.driver.quit()
 
     def test_login(self):
-        '''case03 使用admin  123456测试能否登陆'''
+        '''case01使用正确账号：admin 错误密码123456'''
         login.login(self.driver,'admin','123456')
         self.assertTrue(WebDriverWait(self.driver,10).until(EC.alert_is_present()))
 
